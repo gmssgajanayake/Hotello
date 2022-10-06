@@ -1,0 +1,742 @@
+/*Google font*/
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/*Reset page*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Abyssinica SIL', serif;
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+}
+
+/*Button that scrolls up the page (START)*/
+.top-scroller {
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    background-color: #11172B;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    /*This button should not be displayed when the
+    top of the page is showed*/
+    display: none;
+}
+
+/*Scroll up button should be displayed
+when scrolling down */
+.sticky .top-scroller {
+    display: flex;
+}
+
+.top-scroller a i {
+    color: white;
+}
+
+/*Button that scrolls up the page (END)*/
+
+/*Social media slider (START)*/
+.social-outer {
+    width: 40px;
+    height: 160px;
+    position: fixed;
+    right: 0;
+    bottom: 40vh;
+    background-color: white;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: -3px 1px 16px 5px rgba(0, 0, 0, 0.31);
+    box-shadow: -3px 1px 16px 5px rgba(0, 0, 0, 0.31);
+}
+
+.social-media {
+    width: 30px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #000c41;
+}
+
+.social-media:hover {
+    height: 60px;
+    transition: .5s;
+}
+
+.social-media:last-child {
+    border-bottom: none;
+}
+
+.social-media i {
+    font-size: 20px;
+    color: #000c41;
+}
+
+.social-media a {
+    text-decoration: none;
+}
+
+/*Social media slider (END)*/
+
+/*Main slider (START)*/
+.main-slider-outer {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/swimming-pool-beach-luxury-hotel-outdoor-pools-spa-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer-turkey.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Header (START)*/
+.nav-outer {
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+}
+
+/*This style will be applied when scrolling down */
+.sticky > .nav-outer {
+    background-color: #11172B;
+    transition: .3s;
+    -webkit-box-shadow: -3px 1px 16px 9px rgba(0, 0, 0, 0.31);
+    box-shadow: -3px 1px 16px 9px rgba(0, 0, 0, 0.31);
+}
+
+/*Navigation bars style (START)*/
+.nav a {
+    color: #11172B;
+    text-decoration: none;
+}
+
+/*This style will be applied when scrolling down */
+.sticky .nav a {
+    color: #ffffff;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    border: 1px solid transparent;
+    padding: 0 25px;
+    border-right-color: #11172B;;
+}
+
+/*This style will be applied when scrolling down */
+.sticky .nav li {
+    border-right-color: #ffffff;;
+}
+
+.nav li:last-child {
+    border-right-color: transparent;
+    padding-right: 15px;
+}
+
+.nav li:hover {
+    border-bottom-color: #11172B;;
+}
+
+/*This style will be applied when scrolling down */
+.sticky .nav li:hover {
+    border-bottom-color: #ffffff;;
+}
+
+/*Navigation bars style (END)*/
+
+/*Logo style (START)*/
+.logo-outer {
+    width: 200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.logo-inner {
+    width: 160px;
+    height: 60px;
+    background-image: url("https://hotello.stylemixthemes.com/frankfurt/wp-content/uploads/sites/9/2018/11/hotello_logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/*Logo style (END)*/
+/*Header (END)*/
+
+
+.context {
+    flex: 1;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.context button a {
+    text-decoration: none;
+    color: #11172B;
+    font-size: 1.2em;
+}
+
+.context button {
+    width: 180px;
+    height: 50px;
+    border: 1px solid #11172B;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 0 20px;
+}
+
+/*This style will be applied when scrolling down */
+.sticky .context button {
+    background-color: #11172B;
+    border: 1px solid navajowhite;
+}
+
+/*This style will be applied when scrolling down */
+.sticky .context button a {
+    color: navajowhite;
+}
+
+.context button a:hover {
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+/*Book Today text style*/
+.book-today-text-outer h1 {
+    color: #000c41;
+    font-family: 'Dancing Script', cursive;
+    width: 500px;
+    font-size: 7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 200px;
+    font-weight: lighter;
+    background-color: rgba(255, 255, 255, 0.32);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+/*Hot weekend text (START)*/
+.hot-weekend-offer-text-outer {
+    font-size: 1.5em;
+    position: absolute;
+    bottom: 260px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #222f3e;
+    padding: 2px 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.hot-weekend-offer-text-outer h2 {
+    letter-spacing: 1px;
+}
+
+/*Hot weekend text (END)*/
+
+/*Check rate box (START)*/
+.main-slider-outer .check-rates-outer {
+    width: 80%;
+    height: 120px;
+    position: absolute;
+    bottom: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-slider-outer .inputs {
+    border: none;
+    padding: 20px 60px;
+    font-size: 17px;
+    /*position: absolute;*/
+    border-right: 3px solid rgba(13, 13, 13, 0.18);
+
+}
+
+.main-slider-outer .children {
+    border-right: none;
+}
+
+.main-slider-outer .check-rate-btn {
+    background-color: #11172B;
+    color: white;
+}
+
+.main-slider-outer .check-rate-btn:hover {
+    background-color: #ab7f3a;
+    transition: .5s;
+    cursor: pointer;
+    color: white;
+}
+
+/*Check rate box (END)*/
+/*Main slider (END)*/
+/*============================================================*/
+/*About page (START)*/
+.about-wrapper {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about-inner {
+    width: 30%;
+    height: 300px;
+    padding: 20px 30px;
+    font-family: 'Tangerine', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.about-inner:first-child {
+    flex-direction: column;
+}
+
+.about-inner:last-child {
+    padding-right: 80px;
+}
+
+.about-inner h1 {
+    color: #E4D0B7;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 100px;
+    font-style: italic;
+    font-weight: lighter;
+    position: absolute;
+    top: 62px;
+    left: 30px;
+}
+
+.about-inner h3 {
+    font-size: 2.5em;
+    z-index: 2;
+}
+
+.about-inner p {
+    color: #727171;
+    font-weight: lighter;
+    word-spacing: 1px;
+}
+
+/*About page (END)*/
+/*============================================================*/
+/*Service area (START)*/
+.service-main-outer {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.service-inner {
+    height: 100%;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    transition: .5s ease-in-out;
+}
+
+.service-inner:hover {
+    background-position: center;
+    margin-top: -20px;
+    height: 520px;
+    transition: .5s ease-in-out;
+}
+
+.service-inner:first-child {
+    background-image: url("../images/modern-studio-apartment-design-with-bedroom-living-space.jpg");
+}
+
+.service-inner:nth-child(2) {
+    background-image: url("../images/glass-red-wine-bar-counter.jpg");
+}
+
+.service-inner:nth-child(3) {
+    background-image: url("../images/3d-rendering-dining-set-modern-luxury-dining-room.jpg");
+}
+
+.service-inner:last-child {
+    background-image: url("../images/woman-doing-squats-smith-machine.jpg");
+}
+
+.shadow-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 9, 38, 0.47);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-main-outer .context-1 {
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.service-main-outer .context-1 h1 i {
+    color: rgba(213, 175, 140, 0.75);
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+.service-main-outer .context-1 h2 {
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.service-main-outer .context-2 {
+    height: 250px;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+    display: none;
+}
+
+.service-main-outer .shadow-wrapper:hover .context-1 {
+    display: none;
+
+}
+
+.service-main-outer .shadow-wrapper:hover .context-2 {
+    display: flex;
+}
+
+.service-inner .context-2 h1 {
+    color: rgba(255, 255, 255, 0.84);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service-inner .context-2 p {
+    color: rgba(255, 255, 255, 0.89);
+    text-align: center;
+}
+
+/*Service area (END)*/
+/*============================================================*/
+/*Facility banner (START)*/
+.facility-banner-outer {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    background-color: #F5F5F5;
+    padding-top: 0;
+}
+
+.facility-banner-inner {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.facility-banner-inner i {
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 3em;
+    padding-bottom: 50px;
+}
+
+.facility-banner-inner p, .facility-banner-inner h2 {
+    color: rgba(0, 0, 0, 0.84);
+}
+
+.description {
+    padding: 20px;
+    margin-left: 10px;
+}
+
+/*Facility banner (END)*/
+/*============================================================*/
+/*Best room booking area (START)*/
+.room-booking-area-outer {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.best-room-title {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.best-room-title h1 {
+    color: #E4D0B7;
+    font-family: 'Pinyon Script', cursive;
+    font-size: 100px;
+    font-style: italic;
+    font-weight: lighter;
+    position: absolute;
+    top: 10px;
+    left: 450px;
+}
+
+.best-room-title h3 {
+    font-size: 2.5em;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.room-booking-area-outer .container {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.room-booking-area-outer .inner-item {
+    width: 25%;
+    height: 100%;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
+    box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.05);
+}
+
+.room-booking-area-outer .inner-item:last-child {
+    margin-right: 0;
+}
+
+
+.room-booking-area-outer .image {
+    width: 100%;
+    height: 230px;
+    background-size: cover;
+    background-position: center;
+}
+
+.room-booking-area-outer .content {
+    width: 80%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 20px 30px;
+}
+
+.room-booking-area-outer .image.sl1 {
+    background-image: url("https://hotello.stylemixthemes.com/frankfurt/wp-content/uploads/sites/9/2018/08/photo-1524758631624-e2822e304c36-1024x683-1-740x500.jpeg");
+}
+
+.room-booking-area-outer .image.sl2 {
+    background-image: url("https://hotello.stylemixthemes.com/frankfurt/wp-content/uploads/sites/9/2018/11/photo-1522771739844-6a9f6d5f14af-1024x683-740x500.jpeg");
+}
+
+.room-booking-area-outer .image.sl3 {
+    background-image: url("https://hotello.stylemixthemes.com/frankfurt/wp-content/uploads/sites/9/2018/08/Fotolia_102576616_Subscription_Monthly_M-1024x682-1-740x500.jpg");
+}
+
+.room-booking-area-outer .content p {
+    color: rgba(0, 0, 0, 0.65);
+    text-align: center;
+}
+
+.inner-item button {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #be7820;
+    background: white;
+    color: #be7820;
+}
+
+.inner-item button:hover {
+    cursor: pointer;
+    background: #be7820;
+    color: white;
+    letter-spacing: 1px;
+    transition: .5s;
+}
+
+/*Best room booking area (END)*/
+/*============================================================*/
+/*Advertisement banner (START)*/
+.advertisement-banner {
+    width: 100%;
+    height: 450px;
+    margin-top: 60px;
+    background-image: url("../images/vintage-old-rustic-cutlery-dark.jpg");
+    background-size: cover;
+    position: relative;
+    z-index: -5;
+}
+
+.advertisement-banner .content-of-banner {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: -5;
+    background-color: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.advertisement-banner .content-of-banner h1 {
+    color: rgba(255, 255, 255, 0.84);
+    width: 50%;
+    margin-left: 80px;
+}
+
+.advertisement-banner .content-of-banner p {
+    color: rgba(255, 255, 255, 0.66);
+    width: 70%;
+    margin: 20px 0 20px 80px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.advertisement-banner .content-of-banner button {
+    color: white;
+    border: none;
+    width: 20%;
+    height: 40px;
+    margin-left: 80px;
+    background-color: #ab7f3a;
+}
+
+.advertisement-banner .content-of-banner button:hover {
+    cursor: pointer;
+}
+
+/*Advertisement banner (END)*/
+/*============================================================*/
+/*Message area (START)*/
+.image-customer {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url("https://hotello.stylemixthemes.com/frankfurt/wp-content/uploads/sites/9/2018/06/testimonial-author3-200x200.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/*Message area (END)*/
+/*============================================================*/
+/*Footer (START)*/
+footer {
+    margin-top: 50px;
+    width: 100%;
+    height: 350px;
+    background-color: #11172B;
+}
+
+.footer-content{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.box{
+    margin-left: 50px;
+    width: 20%;
+    display: flex;
+   justify-content: space-between;
+    flex-direction: column;
+    padding: 30px 0;
+}
+
+.box > img{
+    width: 150px;
+    height: 60px;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.box p{
+    color: #858B95;
+    padding: 10px 0;
+}
+
+.box h4{
+    color: #ffffff;
+    margin: 0 0 30px 0;
+}
+
+.box address{
+    color: #858B95;
+}
+
+.box input{
+    width: 80%;
+     height: 40px;
+    border: none;
+    padding-left: 15px;
+    margin-top: 40px
+}
+.copy-right-statement p{
+    color: #858B95;
+    padding: 10px 0;
+    margin:10px 0 50px 50px;
+}
+/*Footer (END)*/
+button:hover{
+    cursor: pointer;
+}
+
+
+
