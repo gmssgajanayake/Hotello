@@ -33,7 +33,7 @@ the top of the page when using the below button-->
 <!--Social media sidebar (END)-->
 <!--===========================================================-->
 <!--Main slider (START)-->
-<div class="" style="background-color: rgba(0,12,65,0.04);width: 100%;height: 100vh;position: absolute"></div>
+<div class="" style="background-color: rgba(1,9,38,0.18);width: 100%;height: 100vh;position: absolute"></div>
 <div class="main-slider-outer">
     <!--Header of the page (START)-->
     <header>
@@ -42,15 +42,21 @@ the top of the page when using the below button-->
             <div class="logo-outer">
                 <div class="logo-inner"></div>
             </div>
-            <div class="context">
+            <!--Mobile context-->
+            <div onclick="activate()" class="context mobile">
+                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+            <!--Desktop context-->
+            <div class="context desktop">
                 <!--Navigation bars-->
                 <ul class="nav">
-                    <li><span><a href="">HOME</a></span></li>
-                    <li><span><a href="">ROOM</a></span></li>
-                    <li><span><a href="">NEWS</a></span></li>
-                    <li><span><a href="">GALLERY</a></span></li>
-                    <li><span><a href="#about">ABOUT</a></span></li>
-                    <li><span><a href="#contact">CONTACT</a></span></li>
+                    <li onclick="activate()"><span><a href="#body">HOME</a></span></li>
+                    <li onclick="activate()"><span><a href="#rooms">ROOM</a></span></li>
+                    <li onclick="activate()"><span><a href="#news">NEWS</a></span></li>
+                    <li onclick="activate()"><span><a href="#gallery">GALLERY</a></span></li>
+                    <li onclick="activate()"><span><a href="#about">ABOUT</a></span></li>
+                    <li onclick="activate()"><span><a href="#contact">CONTACT</a></span></li>
                 </ul>
                 <!--Book now button of the header-->
                 <button><span><a href="">BOOK NOW</a></span></button>
@@ -90,6 +96,32 @@ the top of the page when using the below button-->
     </div>
     <!--Check rates (END)-->
 </div>
+
+
+<!--Mobile-->
+<div class="check-rates-outer mobile">
+
+    <h1>Check Rate</h1>
+    <!--Data input-->
+    <input class="inputs" type="date" name="" id="">
+    <!--Gender select combo box-->
+    <select class="inputs" name="" id="Gender">
+        <option value="volvo">Male</option>
+        <option value="saab">Female</option>
+    </select>
+    <!--Number of children select combo box-->
+    <select class="inputs children" name="cars" id="cars">
+        <option value="volvo">Children</option>
+        <option value="saab">1</option>
+        <option value="mercedes">2</option>
+        <option value="audi">3</option>
+    </select>
+    <!--Check rate button-->
+    <button class="inputs check-rate-btn">Check Rates</button>
+</div>
+<!--Mobile-->
+
+
 <!--Main slider (END)-->
 <!--========================================================-->
 <!--About area (START)-->
@@ -115,7 +147,7 @@ the top of the page when using the below button-->
 <!--About area (END)-->
 <!--=========================================================-->
 <!--Service area (START)-->
-<div class="service-main-outer">
+<div class="service-main-outer" id="rooms">
     <div class="service-inner">
         <div class="shadow-wrapper">
             <div class="context-1">
@@ -258,7 +290,7 @@ the top of the page when using the below button-->
 <!--Best room booking area (END)-->
 <!--=========================================================-->
 <!--Advertisement banner (START)-->
-<div class="advertisement-banner">
+<div class="advertisement-banner" id="gallery">
     <div class="content-of-banner">
         <h1>Good time, Great taste</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque consectetur enim eos et eum ex fugit hic
@@ -271,7 +303,7 @@ the top of the page when using the below button-->
 <!--Advertisement banner (END)-->
 <!--=========================================================-->
 <!--Message area (START)-->
-<div class="room-booking-area-outer" style="height: 550px">
+<div class="room-booking-area-outer message" id="news" style="height: 550px">
     <div class="best-room-title">
         <h1 class="welcome-text">Testimonials</h1>
         <h3 class="enjoy-text">
@@ -303,7 +335,8 @@ the top of the page when using the below button-->
         <div class="box">
             <h4>CONTACT US</h4>
             <address>1010 Berkler avenue, Brooklyn,
-                New York City, NY 10018 US</address>
+                New York City, NY 10018 US
+            </address>
             <p>
                 Tel.: +1 998 150 3020 <br>
                 Fax.: +1 998 150 3020
@@ -315,16 +348,17 @@ the top of the page when using the below button-->
             <h4>STAY IN TOUCH</h4>
             <div class="email" style="display: flex;align-items: center;justify-content: center">
                 <input type="email" PLACEHOLDER="Your email address">
-                <button  style="display: flex;align-items: center;justify-content: center;width: 40px;height: 40px;border: none;border-radius:0;background-color: white;margin-top: 40px"><i  class="fa-solid fa-paper-plane" ></i></button>
+                <button style="display: flex;align-items: center;justify-content: center;width: 40px;height: 40px;border: none;border-radius:0;background-color: white;margin-top: 40px">
+                    <i class="fa-solid fa-paper-plane"></i></button>
             </div>
             <p style="padding-top: 20px">Enter your email address for promotions and news.</p>
         </div>
     </div>
-    <div class="separate" >
-        <hr style="margin:0 50px; color: #858B95;">
+    <div class="separate">
+        <hr style="height: 1px; background-color: rgba(255,255,255,0.43) ; border: none; margin: 0 30px">
     </div>
     <div class="copy-right-statement">
-        <p>Copyright © 2022 Hotel Plus Theme by StylemixThemes</p>
+        <p>Copyright © 2022 Hotel Plus Theme by Sakuja Shamal</p>
     </div>
 </footer>
 

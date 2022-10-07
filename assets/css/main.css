@@ -16,6 +16,15 @@ header {
     width: 100%;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.check-rates-outer.mobile {
+    display: none
+}
+
+
 /*Button that scrolls up the page (START)*/
 .top-scroller {
     width: 30px;
@@ -46,6 +55,7 @@ when scrolling down */
 
 /*Social media slider (START)*/
 .social-outer {
+    z-index: 10;
     width: 40px;
     height: 160px;
     position: fixed;
@@ -229,6 +239,10 @@ when scrolling down */
 .context button a:hover {
     letter-spacing: 2px;
     transition: .5s;
+}
+
+.context.mobile {
+    display: none
 }
 
 /*Book Today text style*/
@@ -683,23 +697,23 @@ footer {
     background-color: #11172B;
 }
 
-.footer-content{
+.footer-content {
     width: 100%;
     height: 80%;
     display: flex;
     align-items: center;
 }
 
-.box{
+.box {
     margin-left: 50px;
     width: 20%;
     display: flex;
-   justify-content: space-between;
+    justify-content: space-between;
     flex-direction: column;
     padding: 30px 0;
 }
 
-.box > img{
+.box > img {
     width: 150px;
     height: 60px;
     background-position: center;
@@ -707,36 +721,393 @@ footer {
 
 }
 
-.box p{
+.box p {
     color: #858B95;
     padding: 10px 0;
 }
 
-.box h4{
+.box h4 {
     color: #ffffff;
     margin: 0 0 30px 0;
 }
 
-.box address{
+.box address {
     color: #858B95;
 }
 
-.box input{
+.box input {
     width: 80%;
-     height: 40px;
+    height: 40px;
     border: none;
     padding-left: 15px;
     margin-top: 40px
 }
-.copy-right-statement p{
+
+.box input:hover {
+    border: none;
+}
+
+.copy-right-statement p {
     color: #858B95;
     padding: 10px 0;
-    margin:10px 0 50px 50px;
+    margin: 10px 0 50px 50px;
 }
+
 /*Footer (END)*/
-button:hover{
-    cursor: pointer;
+/*============================================*/
+/*Responsive media query*/
+
+@media only screen and (max-width: 1135px) {
+    .inputs.check-rate-btn {
+        width: 300px;
+    }
 }
+
+@media only screen and (max-width: 1080px) {
+    .main-slider-outer .nav-outer .context.desktop {
+        display: none;
+    }
+
+    .main-slider-outer .nav-outer .context.mobile {
+        display: flex;
+
+    }
+
+    .main-slider-outer .nav-outer .context.mobile i:hover {
+        cursor: pointer;
+    }
+
+    .main-slider-outer .nav-outer .context.mobile i {
+        color: #ffffff;
+        font-size: 20px;
+        margin: 0 20px;
+    }
+
+    .main-slider-outer .nav-outer .context.mobile .fa-xmark {
+        display: none;
+    }
+
+    .main-slider-outer .nav-outer .context.mobile.active .fa-xmark {
+        display: flex;
+        z-index: 20;
+    }
+
+    .main-slider-outer .nav-outer .context.mobile.active .fa-bars {
+        display: none;
+    }
+
+    .main-slider-outer .nav-outer .context.desktop.active-bar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        top: 0px;
+        right: 0;
+        background-color: #11172B;
+    }
+
+    .main-slider-outer .nav-outer .context.desktop.active-bar .nav {
+        flex-direction: column;
+    }
+
+    .main-slider-outer .nav-outer .context.desktop.active-bar .nav li {
+        margin: 20px 0;
+        border-left: 1px solid white;
+    }
+
+    .main-slider-outer .nav-outer .context.desktop.active-bar .nav li:last-child {
+        border-right: 1px solid white;
+        margin-bottom: 40px;
+    }
+
+    .main-slider-outer .nav-outer .context.desktop.active-bar .nav li:first-child {
+        margin-top: -50px;
+    }
+
+    .nav a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+    .nav li {
+        border: 1px solid transparent;
+        padding: 0 25px;
+        border-right-color: #ffffff;;
+    }
+
+    .context button {
+        background-color: #11172B;
+        border: 1px solid navajowhite;
+    }
+
+    .context button a {
+        color: navajowhite;
+    }
+
+    /*================================================*/
+    .about-wrapper {
+        height: 700px;
+        flex-direction: column;
+    }
+
+    .about-inner {
+        width: 80%;
+        height: 100px;
+    }
+
+    .about-inner:last-child {
+        width: 73%;
+    }
+
+    /*===================================================*/
+    .service-main-outer {
+
+        flex-direction: column;
+        height: 1500px;
+    }
+
+    .service-inner {
+
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .main-slider-outer .check-rates-outer {
+        display: none;
+    }
+
+    .check-rates-outer.mobile {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .check-rates-outer.mobile h1 {
+        margin-bottom: 20px;
+    }
+
+    .check-rates-outer.mobile input {
+        width: 100%;
+        height: 150px;
+        margin: 10px 0;
+        border: 1px solid rgba(0, 0, 0, 0.32);
+    }
+
+    .check-rates-outer.mobile select {
+        width: 100%;
+        height: 150px;
+        margin: 10px 0;
+        border: 1px solid rgba(0, 0, 0, 0.32);
+    }
+
+    .check-rates-outer.mobile button {
+        width: 100%;
+        height: 150px;
+        margin: 5px 0;
+        border: none;
+        background-color: #11172B;
+        color: white;
+    }
+
+    .check-rates-outer.mobile button:hover {
+        cursor: pointer;
+        letter-spacing: 2px;
+        transition: 1s;
+    }
+
+    .facility-banner-outer {
+        height: 500px;
+        flex-direction: column;
+    }
+
+    .facility-banner-inner {
+        padding-left: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 1035px) {
+    footer {
+        height: auto;
+        flex-direction: column;
+        border: 1px solid #000c41;
+    }
+
+    .copy-right-statement {
+        margin: 10PX 20PX;
+    }
+
+}
+
+@media only screen and (max-width: 950px) {
+    .about-inner h1 {
+        left: 20px;
+    }
+
+
+    /*========================================*/
+    .room-booking-area-outer {
+        height: auto;
+
+    }
+
+    .room-booking-area-outer .container {
+        flex-direction: column;
+    }
+
+    .room-booking-area-outer .container .inner-item {
+        width: 80%;
+        margin: 20px 10px;
+    }
+
+    .room-booking-area-outer .best-room-title h1 {
+        color: #E4D0B7;
+        left: 50px;
+    }
+
+}
+
+@media only screen and (max-width: 850px) {
+    .advertisement-banner .content-of-banner {
+        width: 100%;
+    }
+
+    .advertisement-banner {
+        width: auto;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-content .box {
+        width: 80%;
+        margin: 0 10px;
+
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-slider-outer .book-today-text-outer {
+        font-size: 15px;
+    }
+
+    .facility-banner-outer {
+        height: 600px;
+        flex-direction: column;
+    }
+
+    .room-booking-area-outer.message {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 550px) {
+    .main-slider-outer .book-today-text-outer {
+        font-size: 13px;
+    }
+
+    .main-slider-outer .hot-weekend-offer-text-outer {
+        font-size: 20px;
+    }
+
+
+}
+
+.facility-banner-outer .facility-banner-inner h2 {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 490px) {
+    .about-inner {
+        width: 80%;
+        height: 150px;
+    }
+
+    .about-inner:last-child {
+        width: 73%;
+    }
+
+    .facility-banner-outer {
+        height: 650px;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+    .main-slider-outer .book-today-text-outer {
+        font-size: 11px;
+    }
+
+    .main-slider-outer .hot-weekend-offer-text-outer {
+        font-size: 15px;
+    }
+
+}
+
+
+@media only screen and (max-width: 440px) {
+    .main-slider-outer .book-today-text-outer {
+        font-size: 10px;
+    }
+
+    .main-slider-outer .hot-weekend-offer-text-outer {
+        font-size: 13px;
+    }
+
+    .facility-banner-outer {
+        height: 700px;
+        flex-direction: column;
+    }
+
+}
+
+@media only screen and (max-width: 420px) {
+    .facility-banner-outer {
+        height: 720px;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .facility-banner-outer {
+        height: 780px;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 380px) {
+    .facility-banner-outer {
+        height: 850px;
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .main-slider-outer .book-today-text-outer {
+        font-size: 9px;
+    }
+
+    .facility-banner-outer {
+        height: 1000px;
+        flex-direction: column;
+    }
+}
+
 
 
 
